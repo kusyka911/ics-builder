@@ -1,4 +1,4 @@
-name: Sync & Build & Publish
+name: Build
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

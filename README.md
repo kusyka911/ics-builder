@@ -1,5 +1,7 @@
-ics
-==================
+# ics
+
+[![npm version](https://badge.fury.io/js/@kusyka911%2Fics.svg)](https://badge.fury.io/js/@kusyka911%2Fics)
+[![Build](https://github.com/kusyka911/ics-builder/actions/workflows/publish.yml/badge.svg)](https://github.com/kusyka911/ics-builder/actions/workflows/publish.yml)
 
 ## Fork
 > Project forked to make package available for usage via CDN from [JSDelivr](https://jsdelivr.com/).
@@ -33,15 +35,14 @@ ics
 > You can specify version in CDN URL. 
 >
 > Template: https://cdn.jsdelivr.net/npm/@kusyka911/ics@{VERSION_TAG}/dist/bundled/index.es.js
+>
 > Example: https://cdn.jsdelivr.net/npm/@kusyka911/ics@3.7.2/dist/bundled/index.es.js
+>
+>See [jsdelivr](https://www.jsdelivr.com/package/npm/@kusyka911/ics) for more info.
 
-> See detailed usage examples bellow.
+> Original package docs bellow.
 
 The [iCalendar](http://tools.ietf.org/html/rfc5545) generator
-
-[![npm version](https://badge.fury.io/js/ics.svg)](http://badge.fury.io/js/ics)
-[![TravisCI build status](https://travis-ci.org/adamgibbons/ics.svg?branch=master)](https://travis-ci.org/adamgibbons/ics.svg?branch=master)
-[![Downloads](https://img.shields.io/npm/dm/ics.svg)](http://npm-stat.com/charts.html?package=ics)
 
 ## Install
 
