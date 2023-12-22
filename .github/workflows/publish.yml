@@ -26,9 +26,19 @@ jobs:
 
       - uses: actions4git/setup-git@v1
       
-      - uses: runsascoded/update-submodules@latest
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update submodules
+        run: git submodule update --recursive --remote
+
+      - name: Detect changes
+        id: submoduleChanges
+        run: |
+          if ! git diff-index --quiet HEAD --; then
+              echo "::set-output name=isChanged::true"
+          fi
+
+      - name: Push submodule updates
+        if: ${{ steps.submoduleChanges.outputs.isChanged == 'true' }}
+        uses: actions4git/add-commit-push@v1
 
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
