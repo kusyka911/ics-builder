@@ -1,9 +1,0 @@
-version: "1"
-rules:
-  - base: master
-    upstream: adamgibbons:master
-    mergeMethod: merge
-    mergeUnstable: false
-    assignees: kusyka911
-    reviewers: kusyka911
-    conflictReviewers: kusyka911
