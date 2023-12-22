@@ -1,8 +1,10 @@
 {
   "name": "@kusyka911/ics",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "description": "",
-  "workspaces": ["ics"],
+  "workspaces": [
+    "ics"
+  ],
   "repository": "https://github.com/kusyka911/ics",
   "homepage": "https://github.com/kusyka911/ics",
   "author": "kusyka911 <24293461+kusyka911@users.noreply.github.com> (https://github.com/kusyka911)",
