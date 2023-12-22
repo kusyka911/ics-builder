@@ -25,6 +25,7 @@
   "types": "ics/index.d.ts",
   "files": [
     "dist/",
-    "ics/index.d.ts"
+    "ics/index.d.ts",
+    "README.md"
   ]
 }
