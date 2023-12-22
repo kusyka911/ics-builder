@@ -30,6 +30,11 @@ ics
     </script>
 ```
 
+> You can specify version in CDN URL. 
+>
+> Template: https://cdn.jsdelivr.net/npm/@kusyka911/ics@{VERSION_TAG}/dist/bundled/index.es.js
+> Example: https://cdn.jsdelivr.net/npm/@kusyka911/ics@3.7.2/dist/bundled/index.es.js
+
 > See detailed usage examples bellow.
 
 The [iCalendar](http://tools.ietf.org/html/rfc5545) generator
