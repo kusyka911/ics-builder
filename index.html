@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preload" href="https://esm.run/d3" />
+  </head>
+  <body>
+    <h1>Hello world!</h1>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@kusyka911/ics@3.7.1-rc.3/dist/index.umd.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@kusyka911/ics@3.7.1-build.6/dist/bundled/index.umd.js"></script> -->
+    <script src="dist/bundled/index.umd.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.5.0/ical.min.js" integrity="sha512-0izBc1upGYnrS1u1MX7QR+sjFIxZWxLVdNI7cUoHHCutDr5ENjuQRZuS+v+3NFNGfwHSrPoHzBzED0rV651tGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script type="module">
+        // import * as isc from 'https://cdn.jsdelivr.net/npm/@kusyka911/ics@3.7.1-rc.3/dist/index.es.js';
+        import * as isc from 'https://cdn.jsdelivr.net/npm/@kusyka911/ics@3.7.1-rc.3/dist/index.es.js';
+        // NOTE: esm.run not works. (but not really needed.)
+        // import * as isc from 'https://esm.run/@kusyka911/ics@3.7.1-rc.3';
+        // import * as isc from 'https://esm.run/@kusyka911/ics/dist/index.es.js';
+        console.debug(isc)
+    </script> -->
+    <script>
+      const event = window.ICS.createEvent({
+        start: [2018, 5, 30, 6, 30],
+        duration: { hours: 6, minutes: 30 },
+        title: "Bolder Boulder",
+        description: "Annual 10-kilometer run in Boulder, Colorado",
+        location: "Folsom Field, University of Colorado (finish line)",
+        url: "http://www.bolderboulder.com/",
+        geo: { lat: 40.0095, lon: 105.2669 },
+        categories: ["10k races", "Memorial Day Weekend", "Boulder CO"],
+        status: "CONFIRMED",
+        busyStatus: "BUSY",
+        organizer: { name: "Admin", email: "Race@BolderBOULDER.com" },
+        attendees: [
+          {
+            name: "Adam Gibbons",
+            email: "adam@example.com",
+            rsvp: true,
+            partstat: "ACCEPTED",
+            role: "REQ-PARTICIPANT",
+          },
+          {
+            name: "Brittany Seaton",
+            email: "brittany@example2.org",
+            dir: "https://linkedin.com/in/brittanyseaton",
+            role: "OPT-PARTICIPANT",
+          },
+        ],
+      });
+
+      if (event.error) {
+        console.error(event.error)
+      }
+      console.debug(event);
+    </script>
+  </body>
+</html>

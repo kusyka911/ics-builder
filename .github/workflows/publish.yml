@@ -1,0 +1,47 @@
+name: Build and publish
+on:
+  push:
+    branches: 
+     - master
+
+jobs:
+  build:
+      name: Build & Publish
+      runs-on: ubuntu-latest
+      permissions:
+        # required for mathieudutour/github-tag-action
+        contents: write
+
+      steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Compile build
+        run: npm run vite:dist
+
+      - name: Check if version has been updated
+        id: check
+        # TODO: Check PR to origin repo
+        uses: kusyka911/version-check@v1.0.0-test.2
+        with:
+          file-url: ${{ vars.NPM_PACKAGE_JSON_URL }}
+          static-checking: localIsNew
+
+      - uses: mathieudutour/github-tag-action@v6.1
+        if: steps.check.outputs.changed == 'true'
+        with:
+          custom_tag: ${{ steps.check.outputs.version }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        if: steps.check.outputs.changed == 'true'
+        run: npm set "//registry.npmjs.org/:_authToken" ${{ secrets.NPM_TOKEN }} && npm publish --access public --tag latest
+

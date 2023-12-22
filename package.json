@@ -1,0 +1,28 @@
+{
+  "name": "@kusyka911/ics",
+  "version": "3.7.1+build.7",
+  "description": "",
+  "workspaces": ["ics"],
+  "repository": "https://github.com/kusyka911/ics",
+  "homepage": "https://github.com/kusyka911/ics",
+  "author": "kusyka911 <24293461+kusyka911@users.noreply.github.com> (https://github.com/kusyka911)",
+  "bugs": {
+    "url": "https://github.com/kusyka911/ics/issues"
+  },
+  "license": "ISC",
+  "scripts": {
+    "vite": "vite",
+    "vite:build": "rm -rf dist; vite build --minify=false; vite build --mode=bundled --minify=false",
+    "vite:dist": "rm -rf dist; vite build; vite build --mode=bundled"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "vite": "^5.0.10"
+  },
+  "main": "./dist/index.js",
+  "types": "ics/index.d.ts",
+  "files": [
+    "dist/",
+    "ics/index.d.ts"
+  ]
+}
