@@ -1,6 +1,6 @@
 {
   "name": "@kusyka911/ics",
-  "version": "3.7.1+build.7",
+  "version": "3.7.1",
   "description": "",
   "workspaces": ["ics"],
   "repository": "https://github.com/kusyka911/ics",
