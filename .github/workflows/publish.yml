@@ -25,7 +25,8 @@ jobs:
           submodules: recursive
 
       - uses: actions4git/setup-git@v1
-      - uses: runsascoded/update-submodules
+      
+      - uses: runsascoded/update-submodules@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
