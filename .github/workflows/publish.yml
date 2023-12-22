@@ -52,10 +52,7 @@ jobs:
           node-version: '18.x'
       
       - name: Install npm dependencies
-        run: |
-          pwd
-          ls -la
-          npm ci
+        run: npm ci
         
       - name: Compile build
         run: npm run vite:dist
