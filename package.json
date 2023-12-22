@@ -5,11 +5,11 @@
   "workspaces": [
     "ics"
   ],
-  "repository": "https://github.com/kusyka911/ics",
-  "homepage": "https://github.com/kusyka911/ics",
+  "repository": "https://github.com/kusyka911/ics-builder",
+  "homepage": "https://github.com/kusyka911/ics-builder",
   "author": "kusyka911 <24293461+kusyka911@users.noreply.github.com> (https://github.com/kusyka911)",
   "bugs": {
-    "url": "https://github.com/kusyka911/ics/issues"
+    "url": "https://github.com/kusyka911/ics-builder/issues"
   },
   "license": "ISC",
   "scripts": {
