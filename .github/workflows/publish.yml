@@ -69,7 +69,10 @@ jobs:
       - name: Sync local version
         if: steps.check.outputs.changed == 'true'
         # run: npm pkg set version $(jq -r '.version' ics/package.json)
-        run: npm version $(jq -r '.version' ics/package.json)
+        run: |
+          if [ $(jq -r '.version' ics/package.json) -ne $(jq -r '.version' package.json)  ]; then
+            npm version $(jq -r '.version' ics/package.json)
+          fi;
 
       - name: Push changes
         uses: ad-m/github-push-action@master
