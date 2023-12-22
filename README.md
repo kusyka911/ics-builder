@@ -1,14 +1,16 @@
 # ics
 
+The [iCalendar](http://tools.ietf.org/html/rfc5545) generator
+
 [![npm version](https://badge.fury.io/js/@kusyka911%2Fics.svg)](https://badge.fury.io/js/@kusyka911%2Fics)
 [![Build](https://github.com/kusyka911/ics-builder/actions/workflows/publish.yml/badge.svg)](https://github.com/kusyka911/ics-builder/actions/workflows/publish.yml)
 
-## Fork
-> Project forked to make package available for usage via CDN from [JSDelivr](https://jsdelivr.com/).
->
-> All dependencies are bundled.
->
-> In case of using with bundler - please use original [ics](https://www.npmjs.com/package/ics) package.
+## Fork and original package
+Project forked to make package available for usage via CDN from [JSDelivr](https://jsdelivr.com/).
+
+All dependencies are bundled.
+
+In case of using with bundler - please use original [ics](https://www.npmjs.com/package/ics) package.
 
 #### CDN usage
 1) Using CDN
@@ -32,7 +34,7 @@
     </script>
 ```
 
-> You can specify version in CDN URL. 
+> Specify version in CDN URL. 
 >
 > Template: https://cdn.jsdelivr.net/npm/@kusyka911/ics@{VERSION_TAG}/dist/bundled/index.es.js
 >
@@ -41,8 +43,6 @@
 >See [jsdelivr](https://www.jsdelivr.com/package/npm/@kusyka911/ics) for more info.
 
 > Original package docs bellow.
-
-The [iCalendar](http://tools.ietf.org/html/rfc5545) generator
 
 ## Install
 
